@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function myfunction() {
+			document.getElementById("para2").innerHTML= 'Out of People better is the one who benefits people';
+		}
+	</script>
+</head>
+<body>
+
+<h2>JavaScript in body</h2>
+
+<p id="para1"></p>
+
+<!-- for script execution to work, element on which the action is applied should come first-->
+<script>
+	document.getElementById('para1').innerHTML = 'Paragraph contents changed by script execution';
+</script>
+
+<hr>
+
+<p id="para2">The below button will execute script function written in head </p>
+<button type="button" onclick="myfunction()">Change Quote para</button>
+</body>
+
+<hr>
+
+	<script>
+		function anotherfunction() {
+			var quote = 'Watch your thoughts, they become your words. Watch your words, they become your actions. Watch your actions, they become your habbits. Watch your habbits, they become your character. Watch your character it becomes your destiny.'
+			document.getElementById("para3").innerHTML= quote ;
+		}
+	</script>
+<p id="para3">On this para function written inside body will be called. </p>
+
+<button onclick="anotherfunction()">Change the above para</button>
+
+<hr>
+
+<h2>Loading functions from external .js files</h2>
+<p id="para4">This is para 4</p>
+<button onclick="change()">load external js function on para 4</button>
+<script src="my scripts.js"></script>
+
+<hr>
+
+<h2>Loading JS function from a website</h2>
+
+<p id="demo">This para will be changed by a function loaded from a website</p>
+<button onclick="myFunction()">Change</button>
+
+<script src="https://www.w3schools.com/js/myScript.js"></script>
+
+</html> 

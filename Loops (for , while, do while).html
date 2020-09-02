@@ -1,0 +1,53 @@
+<!DOCTYPE html>	
+<html>
+<body>
+
+<h2>JavaScript Loops</h2>
+
+<p id="para1"></p>
+<p id="para2"></p>
+<p id="para3"></p>
+<p id="para4"></p>
+<p id="para5"></p>
+
+<div>
+	<h3>Checking equality and existance</h3>
+	<img src="">
+</div>
+
+<script>
+  var names, counter, msg;
+  msg = [' ', ' ', ' ', ' '];
+  names = ['ahmad', 'wajahat', 'abdul haseeb', 'ramay', 'usman'];
+  colors = ['blue', 'green', 'yellow', 'orange'];
+
+  //for loops
+  for (var i=0; i<names.length; i++){
+    msg[0] += names[i]+'<br>';
+  }
+  document.getElementById('para1').innerHTML = msg[0];
+
+  for (var c=0; c<=15; c+=3){
+    msg[1] += c + ' ';
+  }
+  document.getElementById('para2').innerHTML= msg[1];
+
+  //While loops
+  counter = 0;
+  while (counter < colors.length) {
+    msg[2] += colors[counter]+' ';
+    counter += 2;
+  }
+  document.getElementById('para3').innerHTML = msg[2];
+  
+  counter = 1;
+  //Do While loops
+  // executes atleast one time regardless of condition true or false
+  do {
+    msg[3] += counter +' x 5 = '+counter*5; 
+  } while(counter < 1);
+  document.getElementById('para4').innerHTML = msg[3];
+</script>
+
+</body>
+</html>

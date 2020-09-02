@@ -1,0 +1,31 @@
+<!DOCTYPE html>	
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+<h3>Arrays are also special types of objects!<br>
+In which key is the index and value is the actual value stored</h3>
+
+<p id="para1"></p>
+<p id="para2"></p>
+<p id="para3"></p>
+<p id="para4"></p>
+<p id="para5"></p>
+
+<script>
+
+  var colors, color_length, el;
+  colors = ['blue', 'yellow', 'orange'];
+  document.getElementById('para2').innerHTML = colors[1];
+  el = document.getElementById('para1');
+  el.innerHTML = colors[0];
+
+  color_length = 'The length of colors array is '+colors.length;
+  document.getElementById('para3').innerHTML = color_length;
+  colors[2] = 'green'; //changing array element
+  document.getElementById('para4').innerHTML = colors[2];
+  
+</script>
+
+</body>
+</html>

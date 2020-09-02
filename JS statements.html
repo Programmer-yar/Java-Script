@@ -1,0 +1,52 @@
+<!DOCTYPE html>	
+<html>
+<body>
+
+<h2>JavaScript Statements</h2>
+
+<p>A <b>JavaScript program</b> is a list of <b>statements</b> to be executed by a computer.</p>
+
+<p id="para1"></p>
+<p id="para2"></p>
+<hr>
+<h2 id="head1">NAME?</h2>
+
+<hr>
+
+<p id="para3"></p>
+<p id="para4"></p>
+<p id="para5"></p>
+
+<script>
+var x, y, z, string; //statement
+x = 5;  //statement
+y = 6;  //statement
+z = x + y;  //statement
+string = "The value of z is equal to "+ z +"." //statement
+document.getElementById("para1").innerHTML = string;
+
+//Multiple statements on one line are also allowed
+var num1, num2, result;
+
+//JavaScript ignores white spaces, spaces can be included to make the program readable 
+num1 = 12; num2 = 34; result = num1 + num2;
+result_string = "The result of num1 and num2 is "+result+"."
+document.getElementById("para2").innerHTML = result_string;
+
+var num3, num4, first_name, last_name, name, string1, string2, string3; //var is used to declare variables
+num3 = 4 * 3; num4 = 50;
+first_name = "AHMAD"; last_name = 'YAR';
+name = first_name + " " + last_name; //string concatenation
+
+document.getElementById("head1").innerHTML = name;
+
+string1 = 'bird' + 1; //this will also convert number into string
+string2 = 2 + 5 +"5"; // result is '75'
+string3 = string2 + 10; //result is '7510'
+document.getElementById("para3").innerHTML = string1;
+document.getElementById("para4").innerHTML = string2;
+document.getElementById("para5").innerHTML = string3;
+</script>
+
+</body>
+</html>

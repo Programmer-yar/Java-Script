@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Changing content of a para using JavaScript</h2>
+
+<!-- Finds the html element with id='demo' and change its content (inner html) 
+	to current date by calling 'Date()' function -->
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+
+<hr>
+
+<!-- The content (inner html) can be changed to anything -->
+<button type="button" onclick="document.getElementById('para1').innerHTML = 'The paragraph contents are changed by the button using JavaScript'" >Change Para Content</button>
+
+<p id="para1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+</p>
+
+<hr>
+
+<div>
+  <h2>Changing Pictures with javaScript </h2>
+  <button onclick="document.getElementById('my image').src = 'pics/bulb on.gif'"> Turn ON</button>
+
+  <img src="bulb off.gif" style="width: 100px" id="my image">
+
+  <button onclick="document.getElementById('my image').src = 'pics/bulb off.gif'">Turn OFF</button>
+</div>
+
+<hr>
+
+<div>
+	<h2>Changing CSS with javaScript</h2>
+
+	<p id="para2" style="font-size: 20px">It does not contain any nonsense Lorem Ipsum.</p>
+	<button type="button" onclick="document.getElementById('para2').style.fontSize = '40px'" >Change font size of above para</button>
+</div>
+
+<hr>
+
+<div>
+	<h2 id="head1">Hiding and dispalying elements by JavaScript</h2>
+
+	<p id="para3">To a mind that is still the whole universe surrenders!</p>
+	<button type="button" id="btn1" 
+	onclick="document.getElementById('para3').style.display='none'">hide the above para</button>
+
+	<button type="button" id="btn2" 
+	onclick="document.getElementById('para3').style.display ='block'">Show it again</button>
+</div>
+
+
+</body>
+</html> 

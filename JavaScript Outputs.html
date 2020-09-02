@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JS display data in four different ways</h2>
+<ul>
+	<li>Inner html</li>
+	<li>document.write()</li>
+	<li>windows.alert()</li>
+	<li>console.log()</li>
+</ul>
+
+<hr>
+
+<p>Inner html</p>
+<p id="para1"></p>
+
+<script>
+document.getElementById("para1").innerHTML = 5 + 6;
+</script>
+
+<hr>
+
+<p>
+	document.write()<br> It is good to use document.write() for testing purposes <br>
+	Using document.write() after an HTML document is loaded, will delete all existing HTML:
+</p>
+
+<script>
+	document.write(5+6);
+</script>
+
+<button type="button" onclick="document.write(5 + 6)">Try it</button>
+
+<hr>
+
+<p>Inner html</p>
+<p id="para2"></p>
+
+<script>
+	
+</script>
+
+</body>
+</html> 

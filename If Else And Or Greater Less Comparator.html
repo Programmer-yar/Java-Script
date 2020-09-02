@@ -1,0 +1,44 @@
+<!DOCTYPE html>	
+<html>
+<body>
+
+<h2>JavaScript Conditionals</h2>
+
+<p id="para1"></p>
+<p id="para2"></p>
+<p id="para3"></p>
+<p id="para4"></p>
+<p id="para5"></p>
+
+<div>
+	<h3>Checking equality and existance</h3>
+	<img src="pics\checking equality.PNG">
+</div>
+
+<script>
+
+  var score, pass;
+  score = [20, 23, 50, 67, 90];
+  pass = 50;
+
+  if ((score[0] <= pass) && (score[2] <= pass))
+  {
+  	var passed = document.getElementById('para1');
+  	passed.innerHTML = '<b>The score</b> '+score[0]+' and '+score[1]+' were not pass';
+  }
+  else {
+  	document.getElementById('para1').innerHTML = 'else was executed';
+  }
+
+  if (document.getElementById('head1'))
+  {
+  	document.getElementById('para2').innerHTML = 'id of head1 was found';
+  }
+  else
+  {
+  	document.getElementById('para2').innerHTML = 'head1 was not found';
+  }
+</script>
+
+</body>
+</html>
