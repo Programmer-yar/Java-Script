@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Traditional DOM Event Handlers</h1>
+<h2><b>element.onevent = functionName;</b></h2>
+<p> Only one function can be attached with each event handler </p>
+
+<form method="post" action="http://www.example.org/register">
+	<label for="username">Create a username: </label>
+	<input type="text" id="username"/>
+	<div id="feedback"></div>
+
+	<label for="password">Create a password: </label>
+	<input type="password" id="password" />
+	<input type="submit" value="Sign up!" />
+</form>
+
+<script>
+  function checkUsername() {  // Declare function
+  	var elMsg = document.getElementById('feedback');
+  	if (this.value.length < 5){
+  		elMsg.textContent = 'Username must be 5 characters or more';
+  	}
+  	else {
+  		elMsg.textContent = '';
+  	}
+  }
+  
+  var elUsername = document.getElementById('username');
+  elUsername.onblur = checkUsername;
+</script>
+</body>
+</html> 

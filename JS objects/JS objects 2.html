@@ -1,0 +1,37 @@
+<!DOCTYPE html>	
+<html>
+<body>
+
+<h2>JavaScript Objects using Constructor function</h2>
+
+<p id="para1"></p>
+<p id="para2"></p>
+<p id="para3"></p>
+<p id="para4"></p>
+<p id="para5"></p>
+
+<script>
+  //Constructor function
+  function Hotel(name, rooms, booked) {
+  	this.name = name;    // properties
+  	this.rooms = rooms;
+  	this.booked = booked;
+
+  	this.CheckAvailability = function() {  //method
+  		return this.rooms - this.booked;
+  	};
+  }
+
+
+  /* Creating objects using the constructor function */
+  var myHotel = new Hotel('billi', 50, 20); //new is the keyword
+  //myHotel is the object being created 
+  var parkHotel = new Hotel('Park', 40, 30);
+  document.getElementById('para1').innerHTML = myHotel.name;
+  document.getElementById('para2').innerHTML = myHotel.CheckAvailability();
+  document.getElementById('para3').innerHTML = parkHotel.name;
+  document.getElementById('para4').innerHTML = myHotel.booked;
+</script>
+
+</body>
+</html>

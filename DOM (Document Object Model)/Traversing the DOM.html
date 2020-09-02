@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="test1"></p>
+<p id="test2">what is happening</p>
+<di v id="page">
+	<hl id="header">List KING</hl>
+	<h2>Buy groceries</h2>
+	<ul>
+		<li id="one" class="hot"><em>fresh</em> figs</li>
+		<li id="two" class="hot">pine nuts</li>
+		<li id="three" class="hot">honey</li >
+		<li id="four">balsamic vinegar</li>
+	</ul >
+	
+	<script>
+		var start_element = document.getElementById('two').previousSibling; 
+		//var prev_item = start_element.previousSibling;  //gets the previous sibling with id = 'one'
+		document.getElementById('test1').innerHTML = start_element;
+		var next_item = start_element.nextSibling; //gets the next sibling with id = 'three'
+		document.getElementById('test2').innerHTML = next_item.nodeName;
+		prev_item.className = 'complete';
+		next_item.innerHTML = 'Real Honey';
+
+		/* First and Last child */
+		//below statement will get the first 'ul' tag in DOM
+		var start_item = document.getElementByTagName('ul')[0];
+		var first_kid = start_item.firstChild;
+		var last_kid = start_item.lastChild;
+
+		//Changing the class attribute of children element
+		first_kid.setAttribute('class', 'complete');
+		last_kid.setAttribute('class', 'cool');
+
+		//accessing the nodevalue of a text node, it must be a text node
+		item_two = document.getElementById('two');
+		select_pine = item_one.firstChild.nodeValue;
+		select_pine = select_pine.replace('figs', 'eggs');
+		item_two.firstChild.nodeValue = select_pine;
+	</script>
+</div>
+
+</body>
+</html>

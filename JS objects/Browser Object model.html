@@ -1,0 +1,43 @@
+<!DOCTYPE html>	
+<html>
+<body>
+
+<h2>Browser Object Model</h2>
+
+<div id="div1">
+	
+</div>
+<p id="tabwidth"></p>
+<p id="tabheight"></p>
+<p id="history_length"></p>
+<p id="para4"></p>
+<p id="para5"></p>
+<button onclick="window.open('JS objects.html')">open JS Objects</button>
+
+<h3>The Window Object</h3>
+<div>
+	<p>Properties of Window Object</p>
+	<img src="properties of browser object model.PNG">
+	<p>Methods of Window Object</p>
+	<img src="Method of browser object model.PNG">
+</div>
+
+<script>
+  //Using some PROPERTIES of Window object
+  var browser_window=document.getElementById('tabwidth');
+  browser_window.innerHTML = "The browser window width is " + window.innerWidth;
+  var hist = document.getElementById('history_length');
+  hist.innerHTML = "The length of browser history is " + window.history.length;
+
+  //In below code we use JS to write HTML to page
+  var write_div = document.getElementById('div1');
+  write_div_data = '<h1>Some window object Properties</h1><p><b>the window history</b>:'+window.history+'</p>';
+  write_div_data += '<p>window screen height is '+window.screen.height+'</p><hr>';
+  write_div.innerHTML = write_div_data;
+
+  //Uisng a METHOD of a Window Object
+  alert ('Current page :' +window.location);
+</script>
+
+</body>
+</html>

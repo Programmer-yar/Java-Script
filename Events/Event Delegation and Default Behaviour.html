@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="test1"></p>
+
+<ul id="shoppinglist">
+	<li class="complete"><a href=" itemDone.php?id=l"><em>fresh<em> figs<a></li>
+	<li class="complete"><a href="itemDone.php?id=2 ">pine nuts<a><ll i>
+	<li class=" complete"><a href="itemDone.php?id=3">honey<a></li>
+	<li class="complete"><a href="itemDone.php?id=4">balsamic vinegar<a></li>
+</ul>
+
+<script>
+  function getTarget(e) {
+  	if (!e){
+  		e = window.event;
+  	}
+  	return e.target || e.srcElement;
+  }
+
+  function itemDone(e) {
+  	var target, elParent, elGrandparent;
+  	target = getTarget(e);
+  	elParent = target.parentNode;
+  	elGrandparent = target.parentNode.parentNode;
+  	elGrandparent.removeChild(elParent);
+
+  	if (e.preventDefault) {
+  		document.getElementByld('test1').innerHTML = 'TRUE';
+  		e.preventDefault();
+  	}
+  	else 
+  	{
+  		e.returnValue = false;
+  	}
+  }
+
+  var el = document.getElementByld('shoppinglist');
+  if (el .addEventlistener) {
+
+  	el .addEventlistener('click' , function(e) { itemDone(e); }, false);  // Add listener on click
+                                          // Use bubbling phase for flo
+   } else {
+
+   	el.attachEvent('onclick' , function(e){ // Use old IE model : onclick
+	  itemDone (e) ;                               // Call itemDone()
+	}) ;
+   }
+
+
+</script>
+
+</body>
+</html>

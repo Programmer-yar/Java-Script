@@ -1,0 +1,33 @@
+<html>
+<body>
+
+<div id="page">
+  <hl id="header">List</hl>
+  <h2>Buy groceries</h2>
+  <ul>
+	<li id="one" class="hot"><em>fresh</em> figs</li>
+	<li id="two" class="hot">pine nuts</li>
+	<li id="three" class="hot">honey</li >
+	<li id="four">balsamic vinegar</li>
+  </ul >
+
+  <script src="">
+	/*--> 'document.getElementsByTagName('')' will always return a list of node with same tag name
+	 --> the list elements can be accessed by array indexing*/
+
+	//Methods to return a single node element
+	getElementById('one')
+	querySelector('li.hot') //returns only first <li> element with class 'hot'
+
+	//Methods that can return one or more node elements
+	getElementByClassName('hot')  //gets all three <li> items with class='hot'
+	getElementsByTagName('li') //returns all elements of tag <li>
+
+	//Slowest method
+	querySelectorAll('li.hot')  //all <li> elements with class 'hot'
+	querySelectorAll('li[id]')//all <li> elements with defined id attribute
+  </script>
+</div>
+
+</body>
+</html>

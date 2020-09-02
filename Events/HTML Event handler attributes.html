@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML Event Handlers <small>Do not use</small></h1>
+
+<form method="post" action="http://www.example.org/register">
+	<label for="username">Create a username: </label>
+	<input type="text" id="username" onblur="checkUsername()"/>
+	<div id="feedback"></div>
+
+	<label for="password">Create a password: </label>
+	<input type="password" id="password" />
+	<input type="submit" value="Sign up!" />
+</form>
+
+<script >
+	function checkUsername() { // Declare function
+	var elMsg = document.getElementByid('feedback') ; // Get feedback element
+	var elUsername = document .getElementByld('username' );// Get username input
+	if (elUsername.value.length < 5) { // If username too short
+	elMsg.textContent = 'Username must be 5 characters or more';
+    }
+    else {
+    	elMsg.textContent = '';
+    }
+}
+</script>
+</body>
+</html> 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>	
+<html>
+<body>
+
+<h2>JavaScript Objects</h2>
+
+<p id="para1"></p>
+<p id="para2"></p>
+<p id="para3"></p>
+<p id="para4"></p>
+<p id="para5"></p>
+
+<script>
+	var hotel = {     //Hotel is an object
+		/*name, rooms, room_types and booked are called properties of object 'hotel' */
+		name: 'koka',
+		rooms:40,
+		booked:25,
+		address:'In the middle of nowhere',
+		established:1940,
+
+		CheckAvailability: function() { //function inside of an object is called method
+			return this.rooms - this.booked;
+			//'this' is a reference to 'hotel' object itself
+		}
+	};
+
+	var hotel_name = hotel.name;
+	var free_rooms = hotel.CheckAvailability();
+	document.getElementById('para1').innerHTML = hotel_name;
+	document.getElementById('para2').innerHTML = free_rooms;
+	document.getElementById('para3').innerHTML = hotel.address;
+
+	hotel.established = 1950;  //Changing the property of an object
+	document.getElementById('para4').innerHTML = hotel.established;
+
+	delete hotel.name; //this will delete the 'name' property of hotel object
+	document.getElementById('para5').innerHTML = hotel.name;	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>	
+<html>
+<body>
+
+<h2>Document Object Model</h2>
+
+<div id="div1">
+	
+</div>
+<p id="title"></p>
+<p id="modified"></p>
+<p id="url"></p>
+<p id="domain"></p>
+<p id="para5"></p>
+
+<h3>The Documet Object</h3>
+<div>
+	<p>Properties of Document Object</p>
+	<img src="DOM Methods.PNG">
+	<p>Methods of Documet Object</p>
+	<img src="DOM Properties.PNG">
+</div>
+
+<script>
+  //Using some document objects
+  var title_property=document.getElementById('title');
+  title_property.innerHTML = "<b>Window title:</b> " + document.title;
+
+  //In below code we use JS to write HTML to page
+  var write_div = document.getElementById('div1');
+  write_div_data = '<h1>Some document properties</h1><p><b>document URL: </b> '+document.URL+'</p>';
+  write_div_data += '<p><b>Last Modified: </b>'+document.lastModified+'</p>'
+  write_div_data += '<p><b>Domain: </b>'+document.domain+'</p><hr>';
+  write_div.innerHTML = write_div_data;
+
+  
+</script>
+
+</body>
+</html>

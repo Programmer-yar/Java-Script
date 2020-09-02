@@ -1,0 +1,36 @@
+<!DOCTYPE html>	
+<html>
+<body>
+
+<h1>KeyBoard Event</h1>
+<h3>Which key was Pressed</h3>
+
+<input type="text" id="message" />
+<p id="charactersleft"></p>
+<p id="lastkey"></p>
+<h4> Below line will show ASCII code for every key including Enter, Shift etc</h4>
+<p id="ascii"></p>
+
+<script>
+  function Char_count(e) {
+    var textEntered, charDisplay, counter, lastKey;
+    textEntered = document.getElementById('message').value;
+    charDisplay = document.getElementById('charactersleft');
+    counter = (180 - (textEntered.length));
+    charDisplay.textContent = counter;
+
+    lastkey = document.getElementById ('lastkey');
+    lastkey.textContent = 'Last key in ASCII code : ' +e.keyCode;
+  }
+
+  function Show_ascii(e) {
+  	asc_code = document.getElementById('ascii');
+  	asc_code.textContent = 'Last key in ASCII code : ' +e.keyCode;
+  }
+  var el = document.getElementById('message');
+  el.addEventListener('keydown', Char_count, false);
+  el.addEventListener('keypress', Show_ascii, false);
+</script>
+
+</body>
+</html>

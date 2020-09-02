@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Event Listeners</h1>
+<h2><em>element.addEventListener('event', function_name [, Boolean]);</em></h2>
+<p> Deal with more than one function at a time (More advanced) </p>
+
+<form method="post" action="http://www.example.org/register">
+	<label for="username">Create a username: </label>
+	<input type="text" id="username" />
+	<div id="feedback"></div>
+
+	<label for="password">Create a password: </label>
+	<input type="password" id="password" />
+	<div id="pass"></div>
+	<input type="submit" value="Sign up!" />
+</form>
+
+<script>
+  var elUsername = document.getElementById('username');
+  var elPassword = document.getElementById('password');
+
+  function checkUsername() {  // Declare function
+  	var elMsg = document.getElementById('feedback');
+  	if (this.value.length < 5){
+  		elMsg.textContent = 'Username must be 5 characters or more';
+  	}
+  	else {
+  		elMsg.textContent = '';
+  	}
+  }
+
+  function checkPass(pass_length) {  // Declare function
+    var elPass = document.getElementById('pass');
+    
+    // note the difference between this line of above function 
+    if (elPassword.value.length < pass_length){  
+      elPass.textContent = 'Password must be '+pass_length+'or more';
+    }
+    else {
+      elPass.textContent = '';
+    }
+  } 
+
+    
+  elUsername.addEventListener('blur', checkUsername, false);
+  /* --> if 'checkUsername()' is used it will fire away immediately without waiting for event to occur
+  --> 3rd argument 'false' sets direction of event, which is by default false=bubbling phase and true = capturing phase
+
+  /* to pass argument use the below syntax */
+  elPassword.addEventListener('blur', function(){
+  checkPass(5);
+  }, false);
+  
+</script>
+</body>
+</html> 

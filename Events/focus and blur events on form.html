@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Using Event Listeners with Event Object</h1>
+<h2><em>element.addEventListener('event', function_name [, Boolean]);</em></h2>
+<p> Deal with more than one function at a time (More advanced) </p>
+
+<p id="test1"></p>
+<p id="test2"></p>
+<p id="test3"></p>
+<p id="test4"></p>
+<p id="test5"></p>
+
+<form method="post" action="www.google.com">
+	<label for="username">Create a username: </label>
+	<input type="text" id="username"/>
+	<div id="feedback"></div>
+
+	<label for="password">Create a password: </label>
+	<input type="password" id="password" />
+	<div id="pass"></div>
+	<input type="submit" value="Sign up!" id="submit" />
+</form>
+
+<script>
+  function checkLength(e, minLength) {
+    var el;
+    if (!e) {
+      e = window.event;
+    }
+
+    //document.getElementById('test1').innerHTML = e;
+
+    el = e.target || e.srcElement;  //gets target of event
+      //el.nextSibling; give fault
+
+    if (el.value.length < minLength) {
+      elMsg.innerHTML = 'Username is just '+el.value.length+' charcters!';
+      //Cancel_Submit(e);
+      document.getElementById('test4').innerHTML = 'preventDefault firing'
+    } 
+    else {
+      elMsg.innerHTML = '';
+      document.getElementById('test4').innerHTML = 'not preventDefault'
+    }
+  }
+
+  function tipUsername() {
+    //el Msg.className = 'tip';
+    elMsg.innerHTML = 'Username should be 5 characters or more';
+  }
+
+  // function Cancel_Submit(e) {
+  //   var button = document.getElementById("submit")
+  //   button.addEventListener("click", function(e){ e.preventDefault(); }, );
+  // }
+
+  
+  var elUsername = document.getElementById('username');
+  var elMsg = document.getElementById('feedback');
+  
+    
+  elUsername.addEventListener('focus', tipUsername, false);
+  elUsername.addEventListener('blur', function(e){
+    checkLength(e, 5);}, false);
+
+</script>
+</body>
+</html> 

@@ -1,0 +1,32 @@
+<html>
+<body>
+
+<di v id="page">
+	<hl id="header">List KING</hl>
+	<h2>Buy groceries</h2>
+	<ul>
+		<li id="one" class="hot"><em>fresh</em> figs</li>
+		<li id="two" class="hot">pine nuts</li>
+		<li id="three" class="hot">honey</li >
+		<li id="four">balsamic vinegar</li>
+	</ul >
+	
+	<script>
+		var el = document.getElementById('one');
+		//Changing value of its class(CSS) attribute
+		el.ClassName = 'cool';
+
+		//Using DOM queries to get more than one element
+		document.getElementByTagName('li') //Selects all four <li>
+
+		var elements = document.getElementByClassName('hot'); //gives a list
+		if (elements.length > 1) {
+			var first_item = elements.item(0);  //item method is slow
+			var second_item = elements[1];  //this is fast method for accesing elements
+			second_item.ClassName = 'cool';
+		}
+	</script>
+</div>
+
+</body>
+</html>
